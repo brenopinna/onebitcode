@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  /* estilização só pra visualizar. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+header,
+footer {
+  width: 100%;
+  /* caso for definir height fixa
+  usar flex-shrink: 0 junto, para
+  não diminuir */
+  height: 200px;
+  flex-shrink: 0;
+  /* caso for definir as dimensões com
+  padding, não é necessário flex-shrink. */
+  /* padding: 30px; */
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  flex-grow: 1;
+}

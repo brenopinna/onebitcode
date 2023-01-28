@@ -1,0 +1,35 @@
+:root {
+   --title-font: "Montserrat", sans-serif;
+   --date-font: "Roboto", sans-serif;
+   --post-content-font: "Open Sans", sans-serif;
+
+   --bg-color: #fffafa;
+   --date-color: #008080;
+}
+
+body {
+   margin: 0;
+}
+
+.post-container {
+   background-color: var(--bg-color);
+   width: 70%;
+   margin: auto;
+}
+
+.post {
+   padding: 10px 40px;
+}
+
+.date {
+   font-family: var(--date-font);
+   color: var(--date-color);
+}
+
+.post h1 {
+   font-family: var(--title-font);
+}
+
+.post-content {
+   font-family: var(--post-content-font);
+}
