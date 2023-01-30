@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: darkgray;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  gap: 10px;
+  grid-template-areas:
+    "item1 item1"
+    "item2 item3"
+    "item2 item4"
+    "item5 item5"
+    "item6 item7"
+    "item8 item7"
+    "item9 item9";
+}
+
+.item {
+  border: 2px solid;
+  background-color: white;
+  font-size: 25px;
+}
+
+.item-1 {
+  grid-area: item1;
+}
+
+.item-2 {
+  grid-area: item2;
+}
+
+.item-5 {
+  grid-area: item5;
+}
+
+.item-7 {
+  grid-area: item7;
+}
+
+.item-9 {
+  grid-area: item9;
+}
+
+/* ir la no dashboard e fazer um resumão do grid, pra não esquecer dnv. */
