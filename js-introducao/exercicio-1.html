@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const attacker = {
+        name: prompt("Nome do atacante:"),
+        attack: prompt("Poder de ataque:"),
+      }
+
+      const defender = {
+        name: prompt("Nome do defensor:"),
+        life: prompt("Pontos de vida:"),
+        defense: prompt("Poder de defesa:"),
+        hasShield: confirm("O personagem possui um escudo?"),
+      }
+
+      const damage =
+        attacker.attack > defender.defense
+          ? (attacker.attack - defender.defense) / (defender.hasShield ? 2 : 1)
+          : 0
+
+      defender.life -= damage
+
+      alert(`${attacker.name} CAUSOU ${damage} PONTOS DE DANO EM ${defender.name}!!!`)
+
+      alert(
+        "ATACANTE:\n" +
+          `Nome: ${attacker.name}\n` +
+          `ATK: ${attacker.attack}\n\n` +
+          "DEFENSOR:\n" +
+          `Nome: ${defender.name}\n` +
+          `DEF: ${defender.defense}\n` +
+          `VIDA: ${defender.life}\n` +
+          `ESCUDO: ${defender.hasShield ? "Sim" : "Não"}`
+      )
+    </script>
+  </body>
+</html>

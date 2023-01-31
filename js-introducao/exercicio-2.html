@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let amount = parseFloat(prompt("Quando dinheiro você tem disponível?"))
+      let option
+      do {
+        option = parseInt(
+          prompt(
+            `DINHEIRO EM CONTA: ${amount}\n` + `1) Depositar\n` + `2) Sacar\n` + `3) Sair`
+          )
+        )
+        switch (option) {
+          case 1:
+            amount += parseFloat(prompt("Quanto deseja depositar?"))
+            break
+          case 2:
+            amount -= parseFloat(prompt("Quanto deseja sacar?"))
+            break
+          case 3:
+            alert("Programa encerrado!")
+            break
+          default:
+            alert("Opção Inválida!")
+        }
+        if (amount < 0) amount = 0
+      } while (option !== 3)
+    </script>
+  </body>
+</html>
