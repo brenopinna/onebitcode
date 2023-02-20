@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index.js" type="module"></script>
+  </head>
+  <body>
+    <h1>ES Modules</h1>
+    <ul>
+      <li>At functions.js: <code>export [function or variable]</code></li>
+      <li>At index.js: <code>import [functions or variables]</code></li>
+      <li>
+        At index.html:
+        <code id="script"></code>, then the browser can recognize the file as a module and
+        it can use the "import" statement.
+      </li>
+    </ul>
+    <script>
+      document.getElementById("script").innerText =
+        '\<script src="\.\/index.js" type="module"\>\<\/script\>'
+    </script>
+  </body>
+</html>

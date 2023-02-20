@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>Criar Cookie</button>
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        const inputValue = document.querySelector("input").value
+        // tem outras propriedades tb, mas nao entrou a fundo na aula sobre isso.
+        //cookie => "cookieName=name;expires=expirationDate;path=/"
+        //expires => data q o cookie vai sumir
+        // path => caminho do domínio a partir do qual o cookie vai ficar disponivel.
+        const cookie = "teste=" + inputValue + ";path=/;"
+        document.cookie = cookie
+        // seta um cookie, sem sobrescrever o anterior.
+        const cookie2 = "teste2=" + inputValue + ";path=/;"
+        document.cookie = cookie2
+        // seta um cookie, sem sobrescrever o anterior.
+
+        // se um cookie novo for setado com umnome de cookie
+        // ja registrado, o cookie anterior é sobrescrito.
+
+        console.log(document.cookie)
+        // retorna string, para manipular,
+        // usar os métodos das strings
+      })
+    </script>
+  </body>
+</html>
