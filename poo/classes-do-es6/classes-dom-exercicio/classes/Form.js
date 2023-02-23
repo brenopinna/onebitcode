@@ -1,14 +1,15 @@
 import Component from "./Component.js"
 
 class Form extends Component {
-  constructor(options) {
-    super("form", options)
+  constructor(options, parent) {
+    super("form", parent, options)
   }
 
-  addChildren(...elements) {
-    const form = this.getDomElement()
-    elements.forEach(element => form.appendChild(element))
-    this.setDomElement(form)
+  addChildren(...children) {
+    children.forEach(child => {
+      child.setParent(this.getElement())
+      child.render()
+    })
   }
 }
 

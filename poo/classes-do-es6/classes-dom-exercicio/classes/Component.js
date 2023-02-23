@@ -1,27 +1,32 @@
 class Component {
-  #domElement
-  constructor(elementName, options) {
-    this.#domElement = this.build(elementName, options)
+  #element
+  constructor(tag, parent = document.body, options) {
+    this.tag = tag
+    this.parent = parent
+    this.options = options
+    this.build()
   }
 
-  build(elementName, options) {
-    const element = document.createElement(elementName)
-    for (let option in options) {
-      element[option] = options[option]
+  build(tag = this.tag, options = this.options) {
+    this.#element = document.createElement(tag)
+    if (options) Object.assign(this.#element, options)
+    return this
+  }
+
+  render(parent = this.parent) {
+    if (typeof parent === "string") {
+      document.querySelector(parent).appendChild(this.#element)
+    } else {
+      parent.appendChild(this.#element)
     }
-    return element
   }
 
-  render() {
-    document.body.appendChild(this.#domElement)
+  getElement() {
+    return this.#element
   }
 
-  getDomElement() {
-    return this.#domElement
-  }
-
-  setDomElement(element) {
-    this.#domElement = element
+  setParent(newParent) {
+    this.parent = newParent
   }
 }
 
