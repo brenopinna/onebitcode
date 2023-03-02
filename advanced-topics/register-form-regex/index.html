@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form autocomplete="off">
+      <h3 id="form-title">
+        Registre-se para <br />
+        acessar a nossa comunidade!
+      </h3>
+
+      <div class="input-container">
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="input"
+          placeholder="Digite seu nome completo" />
+        <span id="name-error" class="error-span"></span>
+      </div>
+
+      <div class="input-container">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          class="input"
+          placeholder="Digite seu email" />
+        <span id="email-error" class="error-span"></span>
+      </div>
+
+      <div class="input-container">
+        <label for="password">Senha:</label>
+        <input
+          class="input"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Digite uma senha:" />
+        <span id="password-error" class="error-span"></span>
+      </div>
+
+      <button type="submit" id="register">Cadastrar-se</button>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
