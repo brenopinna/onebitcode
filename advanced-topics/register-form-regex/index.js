@@ -44,10 +44,11 @@ function validatePassword(password) {
       password.match(/[A-Z]/) &&
       password.match(/[0-9]/) &&
       password.match(/[^A-Za-z0-9]/) &&
+      !password.match(/\s/) &&
       password.match(/.{8,}/)
     )
   ) {
-    const error = new Error("A senha inserida não é forte o suficiente!")
+    const error = new Error("A senha inserida não segue os critérios de senha segura!")
     error.input = "password"
     throw error
   }
