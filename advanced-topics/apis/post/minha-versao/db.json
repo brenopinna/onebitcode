@@ -1,0 +1,40 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Primeiro Artigo!",
+      "author": "Breno Pinna",
+      "content": "lorem ipsum dolor sit amet"
+    },
+    {
+      "title": "Um titulo maneiro",
+      "author": "Brenola Pinnao",
+      "content": "Conteudo mt foda",
+      "id": 2
+    },
+    {
+      "title": "teste dnv",
+      "author": "brenola",
+      "content": "conteudooo\n",
+      "id": 3
+    },
+    {
+      "title": "último teste só pelo meme",
+      "author": "breno lindao",
+      "content": "CONTEUDO FINAL UEPAAAAAAAAAA",
+      "id": 4
+    },
+    {
+      "title": "",
+      "author": "",
+      "content": "",
+      "id": 5
+    },
+    {
+      "title": "aaaaaaaa",
+      "author": "aaaaaaaa",
+      "content": "aaaaaa",
+      "id": 6
+    }
+  ]
+}

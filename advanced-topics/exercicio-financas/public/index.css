@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  --side-padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem var(--side-padding);
+  font-size: 1.2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 3rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+}
+
+main {
+  display: grid;
+  grid-auto-rows: min-content;
+  flex-grow: 1;
+}
+
+#transactions {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: none;
+}
+
+.transaction:hover {
+  background: rgba(154, 255, 2, 0.23);
+}
+
+.transaction:hover .money {
+  display: none;
+}
+
+.transaction:hover .icons {
+  position: absolute;
+  right: var(--side-padding);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icons img {
+  cursor: pointer;
+  height: 2rem;
+}
+
+#add-transaction {
+  transition: background-color 0.2s;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(70, 117, 0);
+  border-radius: 10px;
+  background-color: rgb(107, 179, 0);
+  margin: 1rem var(--side-padding);
+  display: block;
+  justify-content: center;
+}
+
+#add-transaction:hover {
+  background-color: rgb(96, 160, 0);
+}
+
+#add-transaction:active {
+  background-color: rgb(70, 117, 0);
+}
+
+#amount {
+  font-weight: bold;
+}
+
+#credits {
+  background-color: rgb(107, 179, 0);
+  font-size: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+#credits a {
+  color: black;
+  font-weight: bold;
+}
